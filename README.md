@@ -34,7 +34,7 @@ Caveat Emptor: It seems I did not read the memo carefully (who has time in this 
 
 ## Predictive Maintenance and Battery Swap
 
-![A diagram of a process flow  AI-generated content may be incorrect.](data:image/png;base64...)
+![A diagram of a process flow  AI-generated content may be incorrect.](./images/Picture1.png)
 
 Data flows from the vehicles via the vehicle IoT Kit (described in more detail below) to the device agent and via it to connector service that writes it to pub/sub service. Different services pick relevant data for them (event processor(s) events and data processor(s) incoming measurements). Measurements are written to a data store (Big Query).
 
