@@ -55,9 +55,14 @@ To speed up the Client API, we want to pre-calculate results regularly as tear a
 
 Sometimes the predictive model is wrong and something breaks before the predictions think. For this case we need a comparison service that reads fault events from pub/sub and compares timings with what the model thinks. Discrepancies are aggregated and presented in the Operations Center UI. Administrators can then take appropriate actions if the model performance starts degrading.
 
-### Future direction
+### ADRs
+[predictive maintanance ADRs](katainen-adrs.md#predictive-maintenance-adrs)
+
+### Future direction - Edge Execution
 
 **![A diagram of a process  AI-generated content may be incorrect.](./images/Picture2.png)**
+
+
 
 *Figure 2. Predictive Maintenance on the Edge*
 
@@ -68,6 +73,9 @@ One thinks easily that for cost reasons the IoT kit at vehicles needs to be simp
 The architectural change is not too complex. The model is downloaded to the vehicle (car, van) that is beefed with GPU and results are emitted as events/data from the vehicle using normal routes.
 
 We still want to cache results for the predicted time-to-failure but it makes no sense to report this frequently if everything is shipshape. Local models could send this perhaps once a day, only report when time is within configured limit (say within next month a fault is expected to happen) or when battery discharges much faster than last reported. Comparison works as before.
+
+### ADRs
+[Edge Executionn ADRs](katainen-adrs.md#edge-execution-adrs)
 
 ## Predictive Demand Models
 
@@ -120,6 +128,10 @@ Quite a few customer behaviour models can be created in this manner
 
 For-uptake-customer-per-promo can be used to find customers most likely to convert to daily commuters.
 
+### ADRs
+[Customer Behaviourals Model ADRs](katainen-adrs.md#customer-behauvioral-model-adrs)
+
+
 ## Customers’ Conversational AI Chatbot
 
 Purpose of this chatbot is to answer customer questions about the service and current status of the vehicles and service in general (how busy it is etc.) You can interact with it using either text or speak to it.
@@ -145,6 +157,10 @@ Queries are handled by a processing path.
 
 In order to save money, Katainen MC may think of moving some behavioural models to the consumers phone (avoiding to need to run them in the cloud costing money). This would need to be opt-in as most users guard their phone battery with near religious zeal. Still, this would allow the consumer to chat with Katainen MC asking for example “make me an offer I can’t refuse,…, no,no,no,no, make a real offer, …” or “tell me the route I was driving last Thursday” (as text listing street addresses at measurement points). Whether this would be worth it, I’ll leave to the capable hands of the upper management.
 
+### ADRs
+[Conversational AI-Chatbot ADRs](katainen-adrs.md#conversational-ai-chatbot-adrs)
+
+
 ## OPS Center Chatbot
 
 Same concept is applicable to operations centre where people manage the fleet. Here they use the system to make queries about the state of the system or individual vehicles. As additional the operational staff can ask the system to make a plan for solving a particular problem. The plan is not immediately executed but the staff can review and edit it before submitting to execution. This also means that it has some additional tools at its usage for making the change. Otherwise, it is similar to the previous system.
@@ -152,9 +168,12 @@ Same concept is applicable to operations centre where people manage the fleet. H
 ![A diagram of a system  AI-generated content may be incorrect.](./images/Picture5.png)
 *Figure 5. Operational Centre Chatbot Architecture*
 
-System prompt is augmented to differentiate between PLAN and QUERY modes and to return plan in structured format to user.
+System prompt is augmented to differentiate between PLAN and QUERY modes and to return plan in structured format to user. As the chatbot now makes changes to the external environment, it is essential that user role and rights are checked before tools are executed.
 
 User interface is augmented so that user can accept/reject or edit the plan. When submitting again, code handling the plan iterates over it (this is not in LLM, but coded as a “driver” for plan). Plan is executed in similar manner but some tools are added to actually affect the state of the system (config changes for example). Results are added to context and finally a LLM is used to formulate final response.
+
+### ADRs
+[Operations Center Chatbot ADRs](katainen-adrs.md#operations-center-chatbot-adrs)
 
 ## Anomaly detection
 
@@ -186,6 +205,8 @@ For the batch processing the flow can be as follows:
 * The models are then executed for example daily or as micro-batches more frequenty. Thresholding is added so that MC can define what type of deviations are defined as “anomalies”
 * When an anomaly is detected, its good to act quickly so notifications are best published both to operations center dashboard/anomaly table in data warehouse as well sent to a dedicated slack channel or whatsapp group etc.
 
+### ADRs
+[Anoomaly Detection ADRs](katainen-adrs.md#anomaly-detection-adrs)
 # Katainen MC (pertinent) architecture
 
 (achtually almost full architecture as I misread the memo in the beginning and started working breath first …)
