@@ -369,7 +369,7 @@ Charging system actions start mainly by user actions from the app or via events 
 * Customer returns car/van with noticeable scratches indicating small traffic accident => penalty calculated, customer notified
 * Next customer notices a noticeable scratch that previous customer hid in images they reported => up to MC management to decide but probably manual handling started to find out if the vehicle was vandalized in the time between or small fraud attempted by previous customer => opportunity for AI)
 
-![A diagram of a software company  AI-generated content may be incorrect.](./images/Picture10.png
+![Charging Architecture.](./images/Picture10.png)
 
 *Figure 10. Charging architecture*
 
