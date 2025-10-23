@@ -62,8 +62,6 @@ Sometimes the predictive model is wrong and something breaks before the predicti
 
 **![A diagram of a process  AI-generated content may be incorrect.](./images/Picture2.png)**
 
-
-
 *Figure 2. Predictive Maintenance on the Edge*
 
 As an economically prudent company, Katainen MC is looking for ways to reduce costs. One option is to move interference to the edge.
@@ -138,7 +136,7 @@ For-uptake-customer-per-promo can be used to find customers most likely to conve
 
 Purpose of this chatbot is to answer customer questions about the service and current status of the vehicles and service in general (how busy it is etc.) You can interact with it using either text or speak to it.
 
-![A diagram of a speech  AI-generated content may be incorrect.](./images/Picture4.png)
+**![A diagram of a speech  AI-generated content may be incorrect.](./images/Picture4.png)**
 
 *Figure 4. Customer Chatbot Architecture*
 
@@ -167,7 +165,7 @@ In order to save money, Katainen MC may think of moving some behavioural models 
 
 Same concept is applicable to operations centre where people manage the fleet. Here they use the system to make queries about the state of the system or individual vehicles. As additional the operational staff can ask the system to make a plan for solving a particular problem. The plan is not immediately executed but the staff can review and edit it before submitting to execution. This also means that it has some additional tools at its usage for making the change. Otherwise, it is similar to the previous system.
 
-![A diagram of a system  AI-generated content may be incorrect.](./images/Picture5.png)
+**![A diagram of a system  AI-generated content may be incorrect.](./images/Picture5.png)**
 *Figure 5. Operational Centre Chatbot Architecture*
 
 System prompt is augmented to differentiate between PLAN and QUERY modes and to return plan in structured format to user. As the chatbot now makes changes to the external environment, it is essential that user role and rights are checked before tools are executed.
@@ -215,7 +213,7 @@ For the batch processing the flow can be as follows:
 
 The high-level architecture of the system is in the diagram below:
 
-![A diagram of a software application  AI-generated content may be incorrect.](./images/Picture7.png)
+**![A diagram of a software application  AI-generated content may be incorrect.](./images/Picture7.png)**
 
 *Figure 7. High-level Mobility Corp Architecture*
 
@@ -253,7 +251,7 @@ Rest of this part we work through different main components
 
 ## Vehicle IoT-Kit
 
-![A screenshot of a computer  AI-generated content may be incorrect.](./images/Picture8.png)
+**![A screenshot of a computer  AI-generated content may be incorrect.](./images/Picture8.png)**
 
 *Figure 8. High-level Vehicle IoT-Kit Connection Environment*
 
@@ -279,7 +277,7 @@ The vehicle module uses almost certainly a micro controller as these are much ch
 
 The general architecture of vehicle kit communicating with the backend is in the diagram below:
 
-![A diagram of a vehicle  AI-generated content may be incorrect.](./images/Picture9.png)
+**![A diagram of a vehicle  AI-generated content may be incorrect.](./images/Picture9.png)**
 
 *Figure 9. Vehicle Kit integration architecture*
 
@@ -369,7 +367,7 @@ Charging system actions start mainly by user actions from the app or via events 
 * Customer returns car/van with noticeable scratches indicating small traffic accident => penalty calculated, customer notified
 * Next customer notices a noticeable scratch that previous customer hid in images they reported => up to MC management to decide but probably manual handling started to find out if the vehicle was vandalized in the time between or small fraud attempted by previous customer => opportunity for AI)
 
-![Charging Architecture.](./images/Picture10.png)
+**![Charging Architecture.](./images/Picture10.png)**
 
 *Figure 10. Charging architecture*
 
@@ -428,7 +426,7 @@ Range prediction based on charge, weather, rental time and city traffic predicti
 
 ## Field Force Architecture
 
-![A diagram of a workflow  AI-generated content may be incorrect.](./images/Picture11.png)
+**![A diagram of a workflow  AI-generated content may be incorrect.](./images/Picture11.png)**
 
 *Figure 11. Field Force high-level architecture*
 
