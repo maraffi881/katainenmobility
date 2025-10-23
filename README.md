@@ -129,7 +129,7 @@ Quite a few customer behaviour models can be created in this manner
 For-uptake-customer-per-promo can be used to find customers most likely to convert to daily commuters.
 
 ### ADRs
-[Customer Behaviourals Model ADRs](katainen-adrs.md#customer-behavioral-model-adrs)
+[Customer Behaviourals Model ADRs](katainen-adrs.md#customer-behavioural-model-adrs)
 
 
 ## Customers’ Conversational AI Chatbot
