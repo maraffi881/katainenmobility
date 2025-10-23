@@ -463,9 +463,3 @@ Using **NotebookLM** to upload maintenance manuals, repair guides, historical fa
 **Recless driving** causing extra tear and wear. Using AI to detect repeated patterns of harsh acceleration/braking or excessive speed for the vehicle. This might as well be implemented with rule-based system to track most cases.
 
 
-
-
-
-xxxxxxx
-
-
