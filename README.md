@@ -13,6 +13,12 @@ The three key issues and hence success criteria for the work where:
 * How to priotize which vehicles to swap out batteris first (bikes, scooters).
 * Right now, most of our customers just use them on an ad-hoc basis - we’d like more of them to rely on our fleet for regular trips like daily commutes
 
+## Team
+[Martti Ylikoski](https://www.linkedin.com/in/marttiylikoski/)
+
+## Video
+[Overview in 5 minutes](https://youtu.be/bMOVeFOjGXo)
+
 ## Overview of AI Usage
 
 For the battery swap issue, a predictive model for equipment is proposed. Process works both for predictive care (when things go pear shaped) as well for batteries (out-of-juice situation) just with own models (for each key component that can break as well for batteries). It consists of found main parts: 1) capturing data first (collect, validate, make into canonical format and to data warehouse) and 2) then actual training pipeline with calculating additional features from raw material, splitting into training and validation, model training, evaluation until model is declared ready, 3) usage where model is available via API that uses cached, precalculated results, 4) comparing actual realized events against what the model predicted to monitor model degradation.
